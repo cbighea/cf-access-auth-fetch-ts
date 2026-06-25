@@ -4,6 +4,24 @@
   "description": "Cloudflare Access Managed OAuth aware fetch wrapper for Node.js CLIs and servers.",
   "type": "module",
   "license": "MIT",
+  "author": "Cristian Bighea",
+  "keywords": [
+    "cloudflare",
+    "cloudflare-access",
+    "oauth2",
+    "pkce",
+    "mcp",
+    "fetch",
+    "bearer-token"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbighea/cf-access-auth-fetch-ts.git"
+  },
+  "homepage": "https://github.com/cbighea/cf-access-auth-fetch-ts#readme",
+  "bugs": {
+    "url": "https://github.com/cbighea/cf-access-auth-fetch-ts/issues"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -18,7 +36,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && node --test test/*.test.mjs",
-    "lint": "tsc -p tsconfig.json --noEmit"
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
